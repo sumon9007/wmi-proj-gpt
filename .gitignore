@@ -4,6 +4,7 @@ __pycache__/
 
 # Ignore virtual environment directories
 venv/
+.venv/
 .env/
 
 # Ignore system files
@@ -45,3 +46,8 @@ node_modules/
 *.pem
 *.crt
 *.p12
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.csv

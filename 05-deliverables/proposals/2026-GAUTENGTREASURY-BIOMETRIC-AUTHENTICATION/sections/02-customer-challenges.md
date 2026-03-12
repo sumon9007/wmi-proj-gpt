@@ -1,0 +1,11 @@
+## Customer Challenges
+
+GPT's tender describes a public-sector environment where verification processes affect high-impact government functions, including recruitment, payroll administration, supply chain controls, forensic support, and beneficiary screening. In this context, verification gaps create both operational inefficiency and governance risk. Manual or fragmented processes make it harder to confirm identities, validate banking details, check current addresses, monitor mortality status, and identify undeclared business interests involving government employees.
+
+The tender also highlights the need for stronger internal controls and better data quality. GPT is not simply looking for a front-end biometric tool. It is looking for a mechanism to improve the integrity of government records and support science-based decision-making. This includes more reliable employee vetting, cleaner payroll data, stronger fraud-prevention capability, and better beneficiary targeting for public programs.
+
+Another core challenge is the complexity of the stakeholder environment. The solution must operate across multiple Gauteng departments and municipalities while integrating with external information holders such as the Department of Home Affairs, credit bureaus, and banking-sector services. GPT must retain central control of data access and governance even while the platform serves a broad operational footprint. That creates a strong requirement for controlled integration, role-based access, auditability, and a disciplined operating model.
+
+The tender further makes clear that GPT is operating in a compliance-first context. The solution must align with POPIA, public-sector governance expectations, GPT and Department of e-Government security directives, and the operational standards implied by SITA-managed hosting. In practice, this means the customer will respond best to a proposal that demonstrates control, clarity, and implementation realism rather than generic innovation language.
+
+These challenges shape the proposal that follows. The recommended approach is not to treat verification as a narrow point solution, but as a centrally governed verification platform that can support multiple departments, multiple use cases, and multiple external information sources while maintaining a clear compliance and accountability model.

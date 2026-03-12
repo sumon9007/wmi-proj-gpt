@@ -2,135 +2,123 @@
 
 ## Purpose
 
-Combine individually-drafted sections into a complete proposal document. Ensures consistency, flow, and traceability across the entire document.
+Combine drafted proposal sections into a single proposal document that is coherent, requirement-aligned, and ready for review.
 
 ## Prerequisites
 
-- All individual section files drafted (in `05-deliverables/proposals/{RFP-ID}/sections/`)
-- Requirement-mapping.md (to verify all requirements are covered)
-- Metadata file with RFP details
-- PROJECT_CONTEXT.md and CUSTOMER_PROFILE.md
+- Drafted section files in `/05-deliverables/proposals/{RFP-ID}/sections/` if available
+- `/05-deliverables/proposals/{RFP-ID}/requirement-mapping.md`
+- `/PROJECT_CONTEXT.md`
+- `/CUSTOMER_PROFILE.md`
+- `/BIDDER_PROFILE.md`
+- Relevant analysis outputs in `/02-analysis/`
+- `/08-ai/templates/proposal-template.md`
+
+`metadata.yml` is helpful if present, but not required. If it is missing, derive title, customer, and tender details from the existing project files.
 
 ## Instructions for Claude
 
-You are a senior technical editor and proposal manager.
+You are a senior proposal manager and technical editor.
 
 ### Objective
 
-Assemble individual proposal sections into a cohesive, customer-ready document that flows logically, maintains consistent voice, and explicitly addresses all RFP requirements.
+Assemble the proposal into a single customer-ready markdown document that reads as one narrative, not a stack of disconnected sections.
 
 ### Read
 
-1. `/05-deliverables/proposals/{RFP-ID}/sections/` — All drafted sections
-2. `/05-deliverables/proposals/{RFP-ID}/requirement-mapping.md` — Verify all requirements covered
-3. `/05-deliverables/proposals/{RFP-ID}/metadata.yml` — RFP context
-4. `/08-ai/templates/proposal-template.md` — Recommended section order
-5. `/PROJECT_CONTEXT.md` and `/CUSTOMER_PROFILE.md` — Customer context for consistency check
+1. `/05-deliverables/proposals/{RFP-ID}/sections/` — drafted section files
+2. `/05-deliverables/proposals/{RFP-ID}/requirement-mapping.md`
+3. `/02-analysis/rfp-analysis/`
+4. `/02-analysis/customer-analysis/`
+5. `/02-analysis/delivery-analysis/`
+6. `/PROJECT_CONTEXT.md`
+7. `/CUSTOMER_PROFILE.md`
+8. `/BIDDER_PROFILE.md`
+9. `/08-ai/templates/proposal-template.md`
+10. `/05-deliverables/proposals/{RFP-ID}/metadata.yml` if present
 
 ### Output
 
-Create file: `/05-deliverables/proposals/{RFP-ID}/draft/proposal.md`
+Create:
+
+- `/05-deliverables/proposals/{RFP-ID}/draft/proposal.md`
 
 ### Tasks
 
-1. **Assemble in Recommended Order**
-   - Use proposal-template.md as your guide for section ordering
-   - Create a Table of Contents
-   - Number sections (1. Executive Summary, 2. Customer Challenges, etc.)
-   - Ensure logical flow (challenge → solution → architecture → security → implementation)
+1. **Assemble in Template Order**
+   - Use the proposal template as the default section order.
+   - If section files already exist, preserve their strongest content.
+   - If a section is missing, create a concise but complete draft using the analysis and requirement mapping.
 
-2. **Add Essential Cover Material**
-   - Title page placeholder: [COVER: Include customer name, proposal date, your company name, "Confidential"]
-   - Table of Contents with page numbers
-   - Document control (date, version, status)
-   - Key contact and escalation info
+2. **Create Front Matter**
+   - Proposal title
+   - Customer name
+   - Tender / RFP number
+   - Date
+   - Confidentiality marker
+   - Document status
 
-3. **Create Cross-References**
-   - Within sections, reference back to earlier sections
-     Where mentioned in architecture, reference security controls
-   - Forward references: "See Section 5: Implementation Approach for timeline details"
-   - Ensure these are accurate
+3. **Create a Markdown Table of Contents**
+   - Use section headings without pretending to know final page numbers.
+   - Keep it clean and useful for review.
 
-4. **Consolidate Requirement Mapping**
-   - Create an appendix that shows requirement-to-section mapping
-   - Format as table: RFP Req # | Section | How Addressed
-   - This proves every RFP requirement is addressed
+4. **Unify Voice and Terminology**
+   - Standardize customer naming, solution naming, and requirement language.
+   - Use bidder information consistently where company experience, implementation approach, or support capability is relevant.
+   - Remove placeholder text and duplicated claims.
+   - Keep tone professional, confident, and public-sector appropriate.
 
-5. **Check Voice & Consistency**
-   - Read through for consistent tone (all professional, all customer-centric)
-   - Ensure no section uses different terminology for same concept
-   - Check that examples and references are consistent across sections
-   - Replace any remaining {{VARIABLES}} or placeholder language
+5. **Preserve Requirement Coverage**
+   - Cross-check the assembled draft against `requirement-mapping.md`.
+   - Ensure all critical requirements are covered somewhere in the proposal body or appendices.
+   - Do not paste the full requirement matrix into the main body; summarize it and attach a focused appendix.
 
-6. **Create Executive Summary** (if not already drafted)
-   - Synthesize key points from all sections
-   - Lead with business outcomes, not technical details
-   - 1 page maximum
-   - Must be able to stand alone as senior executive summary
+6. **Add Only Helpful Transitions**
+   - Add short bridging text where needed.
+   - Do light editing for flow, not heavy rewriting without reason.
 
-7. **Add Transitions**
-   - Between major section, add 1-2 sentences connecting to next topic
-   - Ensure flow is logical for reader (why read section 5 after section 4?)
-   - Make connections back to customer challenges articulated early
+7. **Build Practical Appendices**
+   - Appendix A: Requirement Mapping Summary
+   - Appendix B: Assumptions and Dependencies
+   - Appendix C: Team and Delivery Evidence placeholders if the detailed content is not yet drafted
+   - Appendix D: References placeholder if reference material is not yet drafted
 
-8. **Verify Completeness**
-   - Every RFP requirement has explicit coverage
-   - No missing sections from template
-   - No gaps in logic or flow
-   - All diagrams/artifacts referenced are noted (these will be added separately)
+8. **Flag Gaps Clearly**
+   - If important sections are still missing source content, note this briefly in a `Draft Notes` section at the end.
+   - Do not hide missing inputs behind generic filler.
 
-9. **Create Appendices** (as needed)
-   - Appendix A: RFP Requirement Mapping
-   - Appendix B: Assumptions & Dependencies
-   - Appendix C: Team Credentials (if not in main text)
-   - Appendix D: References (past customers, case studies)
+### Output Structure
 
-### Output Format
+The assembled `proposal.md` should normally contain:
 
-Single proposal.md file with:
-- Professional heading/title structure
-- Table of Contents
-- Numbered sections with clear H2/H3 hierarchy
-- Page break indicators (---) between major sections for formatting
-- Footnote references [^1] for citations/references
-- Appendix section markers
+1. Title / front matter
+2. Table of contents
+3. Executive Summary
+4. Customer Challenges
+5. Proposed Solution
+6. Solution Architecture
+7. Security and Compliance Considerations
+8. Implementation Approach
+9. Assumptions and Dependencies
+10. Benefits and Outcomes
+11. Next Steps
+12. Appendices
 
-Length target:
-- Executive Summary: 1 page
-- Main body: 15-25 pages depending on engagement complexity
-- Appendices: 5-10 pages
-- Total: 20-35 pages
+Use markdown headings and horizontal rules where helpful. Do not simulate pagination.
 
 ### Quality Checks
 
-Before finalizing:
-
-- [ ] All RFP requirements explicitly addressed (check against mapping)
-- [ ] No duplicate content across sections (merge if found)
-- [ ] Consistent terminology throughout
-- [ ] Professional tone throughout
-- [ ] Table of Contents accurately reflects content
-- [ ] Cross-references are accurate (point to correct sections)
-- [ ] No placeholder text remaining
-- [ ] Executive summary can stand alone for busy readers
-- [ ] Flows logically from executive summary → challenges → solution → architecture → security → implementation
-- [ ] Appendices are properly organized and referenced
-
-### Final Assembly Checklist
-
-- [ ] Cover page with date and confidentiality marking
-- [ ] Table of Contents with page numbers
-- [ ] Executive Summary (1 page)
-- [ ] Body sections (in recommended order)
-- [ ] Appendices with Requirement Mapping
-- [ ] Document control (version, date, status)
-- [ ] Key contact info and escalation path
+- [ ] Reads as a unified proposal, not pasted fragments
+- [ ] Uses consistent customer and solution terminology
+- [ ] Covers all high-priority RFP requirements
+- [ ] Aligns with the requirement mapping
+- [ ] No unresolved placeholders remain unless explicitly marked as draft placeholders
+- [ ] Architecture, security, implementation, and commercial constraints are all addressed
+- [ ] Appendix content is useful and not redundant
 
 ### Notes for Claude
 
-- Assembly is about flow and consistency, not rewriting
-- Light edit to improve transitions, but preserve individual section quality
-- Flag any gaps or inconsistencies to address manually
-- Ensure this reads as a unified document, not pasted-together sections
-- Check that tone matches customer sophistication level
-- Verify proposal answers the question "Why us?" throughout
+- Assembly is a synthesis step, not a blind merge.
+- Prefer clarity and flow over verbosity.
+- If sections are missing, draft them from analysis rather than stopping.
+- Be especially careful with public-sector constraints such as compliance, hosting, licensing, IP ownership, and mandatory submission items.

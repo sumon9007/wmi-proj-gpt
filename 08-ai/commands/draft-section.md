@@ -2,104 +2,125 @@
 
 ## Purpose
 
-Generate a single proposal section using content modules, response library examples, and customer context. Use this command to draft sections one-at-a-time before assembly.
+Draft a single proposal section that is aligned to the RFP, consistent with the overall proposal, and ready to be assembled into the full response.
 
 ## Prerequisites
 
-- Content module template for the section you're drafting (e.g., `08-ai/content-modules/02-solution-architecture.md`)
-- Relevant response library examples (`11-response-library/[domain]/`)
-- Completed requirement-mapping.md (to know which RFP requirements this section addresses)
-- Solution design documents (`03-solution/`)
+- Relevant content module in `/08-ai/content-modules/` if one exists for the section
+- `/05-deliverables/proposals/{RFP-ID}/requirement-mapping.md`
+- `/PROJECT_CONTEXT.md`
+- `/CUSTOMER_PROFILE.md`
+- `/BIDDER_PROFILE.md`
+- Relevant analysis in `/02-analysis/`
+- Relevant solution documents in `/03-solution/` if available
+- Existing proposal draft in `/05-deliverables/proposals/{RFP-ID}/draft/proposal.md` if available
+
+The response library is optional. Use it only if suitable examples actually exist.
 
 ## Instructions for Claude
 
-You are a senior proposal writer and solutions architect.
+You are a senior proposal writer and solution architect.
 
 ### Objective
 
-Write a compelling, RFP-aligned proposal section that addresses specific customer needs while being grounded in proven solution patterns.
+Write one proposal section that is customer-ready, requirement-aware, and consistent with the rest of the proposal package.
 
 ### Parameters
 
-You will be provided with:
-- `section_name` — The section you're drafting (e.g., "Solution Architecture")
-- `rfp_requirements` — List of RFP requirements this section must address
-- `engagement_type` — Type of engagement (implementation|consulting|managed-service)
-- `customer_industry` — Customer's industry (for industry-specific language)
-- `customer_specific_details` — Customer's business context, challenges, priorities
+You may be provided with:
+
+- `section_name` — for example `Executive Summary`, `Solution Architecture`, or `Implementation Approach`
+- `rfp_requirements` — relevant requirement IDs or requirement statements for that section
+- `engagement_type`
+- `customer_industry`
+- `customer_specific_details`
+
+If some parameters are missing, derive them from the existing project files instead of stopping.
 
 ### Read
 
-1. `/08-ai/content-modules/{section_name}.md` — The content module for this section
-2. `/11-response-library/` — Find 2-3 examples similar to this customer's needs
-   - Search by engagement_type, industry, solution_domain
-3. `/02-analysis/` — Customer analysis and RFP analysis
-4. `/03-solution/` — Your proposed solution design
-5. `/PROJECT_CONTEXT.md` and `/CUSTOMER_PROFILE.md` — Customer context
+1. `/05-deliverables/proposals/{RFP-ID}/requirement-mapping.md`
+2. `/PROJECT_CONTEXT.md`
+3. `/CUSTOMER_PROFILE.md`
+4. `/BIDDER_PROFILE.md`
+5. `/02-analysis/`
+6. `/03-solution/`
+7. `/05-deliverables/proposals/{RFP-ID}/draft/proposal.md` if present
+8. `/08-ai/content-modules/{section_name}.md` if a matching module exists
+9. `/11-response-library/` only if a clearly relevant example exists
 
 ### Output
 
-Create file: `/05-deliverables/proposals/{RFP-ID}/sections/{section_name}.md`
+Create:
+
+- `/05-deliverables/proposals/{RFP-ID}/sections/{NN-section-name}.md`
+
+Use numbered section filenames that match the proposal flow where possible, for example:
+
+- `01-executive-summary.md`
+- `02-customer-challenges.md`
+- `03-proposed-solution.md`
+- `04-solution-architecture.md`
+- `05-security-and-compliance.md`
+- `06-implementation-approach.md`
+- `07-assumptions-and-dependencies.md`
+- `08-benefits-and-outcomes.md`
+- `09-next-steps.md`
 
 ### Tasks
 
-1. **Start with the Content Module**
-   - Use the module as your structural skeleton
-   - Adapt headings and sections as appropriate for this customer
-   - Preserve the principle section ordering
+1. **Determine the Right Scope for the Section**
+   - Use the requirement mapping to identify what the section must cover.
+   - Keep ownership clear: the section should fully address its assigned requirements without absorbing unrelated content.
 
-2. **Pull Language from Response Library**
-   - Find similar past responses
-   - Extract phrases, metaphors, and approaches that resonated in past wins
-   - Adapt language for this specific customer (change names, numbers, context)
-   - DO NOT copy wholesale; customize intelligently
+2. **Use the Best Available Source Structure**
+   - Start from the matching content module if it exists and is useful.
+   - If no module exists, derive structure from the proposal template and requirement mapping.
 
-3. **Map to RFP Requirements**
-   - Every RFP requirement in "rfp_requirements" must be explicitly addressed
-   - Include explicit language showing you understood the RFP (use their terminology)
-   - Number or callout RFP requirements where relevant
+3. **Draft from Real Project Context**
+   - Use the customer context, RFP analysis, solution pack, and delivery plan.
+   - Use the bidder profile when the section should reflect company capability, experience, delivery approach, or qualifications.
+   - Use customer terminology from the tender and existing project documents.
+   - Avoid invented claims, invented metrics, and generic filler.
 
-4. **Customize for Customer**
-   - Use customer's business language (from CUSTOMER_PROFILE)
-   - Reference their industry-specific challenges
-   - Tailor scope/complexity to their stated needs
-   - Use examples relevant to their context (don't use banking examples for healthcare)
+4. **Reuse Existing Proposal Content Carefully**
+   - If the full proposal draft already contains a strong version of the section, improve and normalize it rather than rewriting from scratch.
+   - Keep terminology, tone, and assumptions consistent with the assembled draft.
 
-5. **Ensure Completeness**
-   - Include all recommended subsections from content module
-   - Add visuals/diagrams references where content module suggests
-   - Verify length is appropriate (content module specifies typical length)
+5. **Use the Response Library Only When Helpful**
+   - If no relevant example exists, do not force it.
+   - Never copy long passages directly.
+   - Adapt patterns, not wording.
 
-6. **Quality Assurance**
-   - Language is professional and customer-facing
-   - No placeholder text remains (all {{VARIABLES}} filled in)
-   - Ties back to Executive Summary messaging
-   - Sets up next section with appropriate transitions
+6. **Call Out Supporting Visuals Where Useful**
+   - Add simple placeholders such as `[Diagram: Logical Architecture]` only when they genuinely help.
+   - Prefer references to the actual diagram spec documents when available.
+
+7. **Check Section Quality**
+   - Ensure the section reads well on its own.
+   - Ensure it supports the overall proposal narrative.
+   - Ensure it addresses the relevant tender requirements explicitly or obviously.
 
 ### Output Format
 
-Standard Markdown with:
-- Clear H2 and H3 headings matching content module structure
-- Tables for complex information (architecture, requirements, timelines)
-- References to diagrams (note: [Diagram: Description] where diagrams should be)
-- Bulleted lists for key points
-- 300-600 words per subsection (content module specifies target length)
+- Standard markdown
+- Clear heading hierarchy
+- Tables only where they improve clarity
+- Diagram callouts only where useful
+- No unresolved placeholders unless explicitly marked as draft notes
 
 ### Quality Checks
 
-- [ ] All RFP requirements from "rfp_requirements" are addressed
-- [ ] Language matches customer's business terminology
-- [ ] Tone is professional consulting tone (not sales-y, not too technical)
-- [ ] Section length matches content module recommendation
-- [ ] Internal consistency with other sections (refer back to earlier sections where appropriate)
-- [ ] No generic placeholder text remaining
-- [ ] Diagrams/tables are called out where appropriate
+- [ ] Relevant RFP requirements are addressed
+- [ ] Language matches customer and tender terminology
+- [ ] Section is consistent with proposal draft, solution pack, and delivery plan
+- [ ] No unsupported claims or invented facts
+- [ ] Tone is professional, clear, and public-sector appropriate
+- [ ] File naming matches proposal section order
 
 ### Notes for Claude
 
-- Balance customer specificity with broader applicability
-- Use data/evidence from your analysis (don't make claims up)
-- Show your thinking (why did you choose this approach?)
-- Make it customer-centric (why does this matter to them?) not vendor-centric
-- Vary sentence structure to maintain readability
-- Assume reader is busy; emphasize key points, hide details in subsections
+- Draft sections so they can be assembled with minimal cleanup.
+- Prefer concrete, traceable statements over persuasive fluff.
+- If the section depends on open assumptions, state them cleanly rather than hiding them.
+- Keep the section scoped; do not let one section become the entire proposal.

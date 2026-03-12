@@ -1,0 +1,113 @@
+---
+# PROJECT METADATA
+
+# RFP IDENTIFICATION
+rfp_id: 2026-GAUTENGTREASURY-BIOMETRIC-AUTHENTICATION
+customer_name: Gauteng Provincial Treasury
+rfp_title: Development of Biometric Authentication System Including Support and Maintenance for Period of 3 Years
+rfp_download_date: 2026-03-13
+rfp_submission_deadline: 2026-03-13
+days_to_submit: 0
+
+# PROJECT CLASSIFICATION
+engagement_type: implementation
+industry: government
+solution_domain: integration
+customer_size: enterprise
+estimated_contract_value: not-yet-confirmed
+
+# STAKEHOLDER TRACKING
+sales_owner: TBD
+solution_architect_lead: TBD
+presales_engineer: TBD
+delivery_pm: TBD
+legal_reviewer: TBD
+
+# DECISION GATES
+bid_decision: pending
+bid_decision_date: 2026-03-13
+bid_decision_owner: TBD
+bid_justification: Strategic public-sector opportunity with strong governance, security, and integration scope.
+
+# STATUS & TIMELINE
+current_phase: proposal-assembly
+phase_entry_date: 2026-03-13
+estimated_phase_exit: 2026-03-20
+overall_status: amber
+status_notes: Core analysis, solution, proposal draft, and delivery-planning artifacts are in place; commercial, named-team, and submission evidence remain to be finalized.
+
+# COMPLIANCE & REQUIREMENTS
+compliance_requirements:
+  - government
+  - ISO-27001
+  - other
+security_clearance_required: no
+data_classification: restricted
+special_considerations:
+  - POPIA-aligned handling of biometric and demographic data
+  - SITA-managed Windows hosting is mandatory
+  - GPT retains ownership of all data and project-generated IP
+  - No third-party license costs may be charged for system use
+  - DR targets are explicit: RTO 4 hours, RPO 15 minutes
+
+# COMPETITIVE CONTEXT
+direct_competitors:
+  - unknown
+competitive_position: mid-pack
+win_probability: medium
+key_competitive_advantages:
+  - Strong alignment to public-sector governance and control model
+  - Clear integration-led architecture aligned to DHA and credit bureau dependencies
+  - Explicit handling of SITA hosting, POPIA, DR, uptime, and GPT ownership constraints
+risk_factors:
+  - Administrative non-compliance would eliminate the bid
+  - Prototype readiness and DHA connectivity are gating risks
+  - Banking and payroll-related interface detail is still incomplete
+
+# REQUIREMENTS ANALYSIS
+total_rfp_requirements: 49
+requirements_mapped: 49
+requirements_coverage: 100%
+critical_differentiators:
+  - Working prototype aligned to DHA connectivity and scoring criteria
+  - Standards-aligned security and privacy architecture
+  - SITA-compatible hosting and GPT-controlled operating model
+  - No-license-cost commercial compliance
+  - Clear 12-month implementation and 24-month support model
+
+# APPROVAL SIGN-OFFS
+solution_architect_approved: pending
+solution_architect_approved_date: TBD
+presales_engineer_approved: pending
+presales_engineer_approved_date: TBD
+delivery_pm_approved: pending
+delivery_pm_approved_date: TBD
+legal_approved: pending
+legal_approved_date: TBD
+sales_leadership_approved: pending
+sales_leadership_approved_date: TBD
+final_approval: pending
+final_approval_date: TBD
+
+# DOCUMENT OUTPUTS
+proposal_draft_path: 05-deliverables/proposals/2026-GAUTENGTREASURY-BIOMETRIC-AUTHENTICATION/draft/proposal.md
+proposal_final_path: 05-deliverables/proposals/2026-GAUTENGTREASURY-BIOMETRIC-AUTHENTICATION/final/proposal.md
+requirement_mapping_path: 05-deliverables/proposals/2026-GAUTENGTREASURY-BIOMETRIC-AUTHENTICATION/requirement-mapping.md
+solution_architecture_path: 03-solution/architecture/
+rfp_analysis_path: 02-analysis/rfp-analysis/
+
+# SUBMISSION DETAILS
+submission_date: TBD
+submission_method: TBD
+submission_confirmation: TBD
+submission_notes: Submission packaging still requires final forms, pricing, named team evidence, and reference attachments.
+
+# OUTCOME TRACKING
+outcome: in-progress
+decision_date: TBD
+decision_source: TBD
+loss_analysis: TBD
+win_notes: TBD
+lessons_learned: TBD
+
+---

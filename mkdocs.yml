@@ -1,5 +1,5 @@
-site_name: Gauteng Treasury Knowledge Portal
-site_description: Internal knowledge portal for the Gauteng Provincial Treasury biometric authentication engagement.
+site_name: GT/GPT/009/2026 - Biometric Authentication Project
+site_description: Knowledge portal for the Gauteng Provincial Treasury biometric authentication project and tender response.
 site_url: https://sumon9007.github.io/wmi-proj-gpt/
 repo_url: https://github.com/sumon9007/wmi-proj-gpt
 repo_name: sumon9007/wmi-proj-gpt
@@ -10,9 +10,23 @@ site_dir: site
 theme:
   name: material
   language: en
+  font:
+    text: Source Sans 3
+    code: IBM Plex Mono
+  logo: null
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
   features:
+    - navigation.expand
     - navigation.sections
     - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
     - content.code.copy
 
 markdown_extensions:
@@ -24,6 +38,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md

@@ -1,6 +1,6 @@
-# Gauteng Treasury Knowledge Portal
+# GT/GPT/009/2026 - Biometric Authentication Project
 
-This portal summarizes the Gauteng Provincial Treasury biometric authentication opportunity and the current solution and delivery position prepared by Waymark Infotech.
+This portal summarizes the Gauteng Provincial Treasury biometric authentication project and the current solution and delivery position prepared by Waymark Infotech.
 
 It is intended for internal reuse, onboarding, and project continuity. It focuses on business context, architecture, implementation, operations, key decisions, and practical team questions.
 

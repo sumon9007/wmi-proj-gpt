@@ -150,8 +150,8 @@
 @media screen and (min-width: 76.25em) {
   .md-main__inner {
     display: grid;
-    gap: 1.6rem;
-    grid-template-columns: 16.5rem 13rem minmax(0, 62rem);
+    gap: 1.2rem;
+    grid-template-columns: 14rem 10.5rem minmax(0, 66rem);
     grid-template-areas: "nav toc content";
     align-items: start;
   }
@@ -184,11 +184,16 @@
     padding-left: 0;
   }
 
+  .md-sidebar--primary .md-nav__list,
+  .md-sidebar--secondary .md-nav__list {
+    font-size: 0.84rem;
+  }
+
   .md-nav--secondary .md-nav__title {
     background: transparent;
     border-radius: 0;
     color: #3a536a;
-    font-size: 0.88rem;
+    font-size: 0.82rem;
     letter-spacing: 0.01em;
     padding-left: 0;
     padding-right: 0;
@@ -196,7 +201,7 @@
 
   .md-nav--secondary .md-nav__list {
     border-left: 2px solid rgba(184, 146, 61, 0.28);
-    padding-left: 0.85rem;
+    padding-left: 0.65rem;
   }
 }
 

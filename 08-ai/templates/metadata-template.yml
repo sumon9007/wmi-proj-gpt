@@ -1,0 +1,89 @@
+---
+# PROJECT METADATA
+# Fill in this section for every RFP to establish tracking and context
+
+# RFP IDENTIFICATION
+rfp_id: [YYYY]-[CUSTOMER-SHORT]-[PROJECT-TYPE]  # Example: 2026-ACMECORP-CLOUD-MIGRATION
+customer_name: [Full customer legal name]
+rfp_title: [Official RFP title from document]
+rfp_download_date: [YYYY-MM-DD]
+rfp_submission_deadline: [YYYY-MM-DD]
+days_to_submit: [auto-calculated]
+
+# PROJECT CLASSIFICATION
+engagement_type: [implementation|managed-service|consulting|support|training]
+industry: [financial-services|healthcare|manufacturing|retail|government|education|technology|other]
+solution_domain: [cloud-migration|security|infrastructure|integration|transformation|deployment-models|other]
+customer_size: [startup|mid-market|enterprise]
+estimated_contract_value: [USD amount or range]
+
+# STAKEHOLDER TRACKING
+sales_owner: [Name]
+solution_architect_lead: [Name]
+presales_engineer: [Name]
+delivery_pm: [Name]
+legal_reviewer: [Name if required]
+
+# DECISION GATES
+bid_decision: [approved|pending|declined]
+bid_decision_date: [YYYY-MM-DD]
+bid_decision_owner: [Name]
+bid_justification: [brief reason for decision: strategic account|high probability|landmark customer|etc]
+
+# STATUS & TIMELINE
+current_phase: [intake|analysis|design|proposal-assembly|internal-review|final-review|submitted|won|lost]
+phase_entry_date: [YYYY-MM-DD]
+estimated_phase_exit: [YYYY-MM-DD]
+overall_status: [green|amber|red]
+status_notes: [brief current status]
+
+# COMPLIANCE & REQUIREMENTS
+compliance_requirements: [PCI-DSS|HIPAA|GDPR|ISO-27001|SOC2|government|other]
+security_clearance_required: [yes|no]
+data_classification: [public|internal|confidential|restricted]
+special_considerations: [bullet list]
+
+# COMPETITIVE CONTEXT
+direct_competitors: [Competitor 1, Competitor 2, ...]
+competitive_position: [frontrunner|mid-pack|underdog]
+win_probability: [percentage or low|medium|high]
+key_competitive_advantages: [list our strengths vs competition]
+risk_factors: [list threats to winning]
+
+# REQUIREMENTS ANALYSIS
+total_rfp_requirements: [number of distinct requirements]
+requirements_mapped: [number mapped to proposal sections]
+requirements_coverage: [percentage]
+critical_differentiators: [3-5 key RFP requirements that matter most]
+
+# APPROVAL SIGN-OFFS
+# Track who has reviewed and approved at each stage
+solution_architect_approved: [no|pending|yes with conditions|yes] | Date: [date]
+presales_engineer_approved: [no|pending|yes with conditions|yes] | Date: [date]
+delivery_pm_approved: [no|pending|yes with conditions|yes] | Date: [date]
+legal_approved: [no|pending|yes with conditions|not-required] | Date: [date]
+sales_leadership_approved: [no|pending|yes with conditions|yes] | Date: [date]
+final_approval: [no|pending|approved] | Date: [date]
+
+# DOCUMENT OUTPUTS
+proposal_draft_path: 05-deliverables/proposals/{RFP-ID}/draft/proposal.md
+proposal_final_path: 05-deliverables/proposals/{RFP-ID}/final/proposal.md
+requirement_mapping_path: 05-deliverables/proposals/{RFP-ID}/requirement-mapping.md
+solution_architecture_path: 03-solution/architecture/
+rfp_analysis_path: 02-analysis/rfp-analysis/
+
+# SUBMISSION DETAILS (fill after finalization)
+submission_date: [YYYY-MM-DD]
+submission_method: [email|portal|portal-with-wet-sig|courier|fedex]
+submission_confirmation: [confirmation number or email receipt date]
+submission_notes: [any special delivery instructions or issues]
+
+# OUTCOME TRACKING (fill after decision)
+outcome: [won|lost|cancelled|no-award]
+decision_date: [YYYY-MM-DD]
+decision_source: [direct customer communication|email|official letter]
+loss_analysis: [if lost: why did we lose|competitive feedback|budget constraints|etc]
+win_notes: [if won: key factors that led to win]
+lessons_learned: [what would we do differently next time]
+
+---

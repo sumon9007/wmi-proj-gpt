@@ -1,0 +1,1 @@
+Create a professional customer-facing proposal using the available project context, RFP analysis, and solution design. Keep the executive summary concise and business-friendly. Preserve technical accuracy and consulting-style structure.

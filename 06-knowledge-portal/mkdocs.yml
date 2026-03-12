@@ -1,0 +1,11 @@
+site_name: Client Project Knowledge Portal
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Project Overview: project-overview.md
+  - Architecture: architecture.md
+  - Implementation: implementation.md
+  - Operations: operations.md
+  - Decisions: decisions.md
+  - FAQ: faq.md

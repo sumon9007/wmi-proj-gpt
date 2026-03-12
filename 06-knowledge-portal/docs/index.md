@@ -19,6 +19,7 @@ It is intended for internal reuse, onboarding, and project continuity. It focuse
 - [Implementation](implementation.md)
 - [Operations](operations.md)
 - [Decisions](decisions.md)
+- [Proposal Draft](proposal-draft.md)
 - [FAQ](faq.md)
 
 ## What Matters Most

@@ -41,7 +41,7 @@ Assemble the proposal into a single customer-ready markdown document that reads 
 
 Create:
 
-- `/05-deliverables/proposals/{RFP-ID}/draft/proposal.md`
+- `/05-deliverables/proposals/{RFP-ID}/draft/{RFP-ID}-proposal-draft.md`
 
 ### Tasks
 
@@ -89,7 +89,7 @@ Create:
 
 ### Output Structure
 
-The assembled `proposal.md` should normally contain:
+The assembled `{RFP-ID}-proposal-draft.md` should normally contain:
 
 1. Title / front matter
 2. Table of contents
@@ -122,3 +122,6 @@ Use markdown headings and horizontal rules where helpful. Do not simulate pagina
 - Prefer clarity and flow over verbosity.
 - If sections are missing, draft them from analysis rather than stopping.
 - Be especially careful with public-sector constraints such as compliance, hosting, licensing, IP ownership, and mandatory submission items.
+- Use explicit file naming for assembled outputs:
+  - draft proposal: `{RFP-ID}-proposal-draft.md`
+  - avoid generic names like `proposal.md` when a tender-specific filename can be used

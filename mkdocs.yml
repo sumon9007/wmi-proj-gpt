@@ -48,6 +48,7 @@ nav:
   - Analysis:
       - RFP Summary: analysis/rfp-summary.md
       - Key Requirements: analysis/key-requirements.md
+      - Requirement Mapping: analysis/requirement-mapping.md
       - Risks, Assumptions, and Dependencies: analysis/risks-assumptions-dependencies.md
       - Customer Drivers: analysis/customer-drivers.md
       - Delivery Implications: analysis/delivery-implications.md
@@ -55,4 +56,6 @@ nav:
   - Implementation: implementation.md
   - Operations: operations.md
   - Decisions: decisions.md
+  - Proposal Draft: proposal-draft.md
+  - Document Naming Conventions: document-naming-conventions.md
   - FAQ: faq.md

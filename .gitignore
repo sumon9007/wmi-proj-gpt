@@ -1,0 +1,47 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore node_modules (if applicable)
+node_modules/
+
+# Ignore other temporary files
+*.swp
+*.swo
+*.~
+*.orig
+
+# Ignore archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Ignore sensitive files
+.env
+*.key
+*.pem
+*.crt
+*.p12
